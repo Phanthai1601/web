@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="main">
+    <div class="menu">
+      <h3 class="menu-heading">DANH MỤC SẢN PHẨM</h3>
+      <nav class="menu-main">
+        <ul>
+          <li><a href="#">Khuyến mãi</a></li>
+          <li><a href="#">Điện thoại</a></li>
+          <li><a href="#">Máy tính bảng</a></li>
+          <li class="cha"><a href="#">Máy tính Apple</a>
+            <ul class="con">
+              <li><a href="#">Macbook new 12 inch</a></li>
+              <li><a href="#">Macbook pro Retina</a></li>
+              <li><a href="#">Macbook Air 2017</a></li>
+              <li><a href="#">Imac 2017</a></li>
+              <li><a href="#">Macbook siêu cấp vip pro </a></li>
+            </ul>
+          </li>
+          <li><a href="#">Máy tính cũ</a></li>
+          <li><a href="#">Loa chính hãng JBL</a></li>
+          <li><a href="#">Máy đọc sách - Kindle</a></li>
+          <li><a href="#">Ipad</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="header-content">
+        <h2 style="margin-right: 900px; margin-left: 20px;">Máy laptop cũ</h2>
+        <p>Sắp xếp theo</p>
+          <select name="" id="">
+           <option value="">Mới nhất trước</option>
+           <option value="">Giá tăng dần</option>
+           <option value="">Giá giảm dần</option>
+          </select> 
+      </div>
+      <div class="sanpham-content">
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+        <div>
+          <img src="3174_" alt="">
+          <p>Lenovo Legin 7</p>
+          <p>17.500.000đ</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  <div class="js" style="margin-left: 50px;">
+    <label style="margin-right: 200px;" for="num1"><b>Nhập số thứ nhất:</b></label><input id="num1" type="text">
+    <br>
+    <label style="margin-right: 209px;" for="num2"><b>Nhập số thứ hai:</b></label><input id="num2" type="text">
+    <br>
+    <label style="margin-right: 80px;" for="gcd"><b>Ước chung lớn nhất của 2 số trên là</b></label><input id="gcd" type="text">
+    <br>
+    <div class="demo" style="margin-left: 350px;">
+        <button onclick="findGCD()">Tìm kiếm</button>
+        <button onclick="clearFields()">Hủy bỏ</button>
+    </div>
+</div>
+<script>
+    function findGCD() {
+        const num1 = parseInt(document.getElementById('num1').value);
+        const num2 = parseInt(document.getElementById('num2').value);
+        if (isNaN(num1) || isNaN(num2)) {
+            alert('Vui lòng nhập cả hai số hợp lệ.');
+            return;
+        }
+
+        document.getElementById('gcd').value = gcd(num1, num2);
+    }
+
+    function gcd(a, b) {
+        while (b !== 0) {
+            const temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    function clearFields() {
+        document.getElementById('num1').value = '';
+        document.getElementById('num2').value = '';
+        document.getElementById('gcd').value = '';
+    }
+</script>
+
+  </body>
+</html>
